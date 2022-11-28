@@ -1,11 +1,5 @@
-public class Fridge {
-    private double Length;
-    private double Height;
-    private double Depth;
-    private String ManufacturerName;
-    private String DeviceName;
-    private String DeviceType;
-    private Integer PowerConsumption;
+public class Fridge extends Device{
+
     private Integer FreezerCapacity;
     private Integer FreshFoodCapacity;
     private String RefrigerantType;
@@ -19,6 +13,7 @@ public class Fridge {
      */
     public Fridge()
     {
+        super();
         NumberOfObjects+=1;
     }
 
@@ -39,13 +34,7 @@ public class Fridge {
      * @param DefrostSystem
      */
     public Fridge(double Length, double Height, double Depth, String ManufacturerName, String DeviceName, String DeviceType, Integer PowerConsumption, Integer FreezerCapacity, Integer FreshFoodCapacity, String RefrigerantType, Integer NumberOfDoors, String DefrostSystem) {
-        this.Length = Length;
-        this.Height = Height;
-        this.Depth = Depth;
-        this.ManufacturerName = ManufacturerName;
-        this.DeviceName = DeviceName;
-        this.DeviceType = DeviceType;
-        this.PowerConsumption = PowerConsumption;
+        super(Length, Height, Depth, ManufacturerName, DeviceName, DeviceType, PowerConsumption);
         this.FreezerCapacity = FreezerCapacity;
         this.FreshFoodCapacity = FreshFoodCapacity;
         this.RefrigerantType = RefrigerantType;
@@ -53,104 +42,7 @@ public class Fridge {
         this.DefrostSystem = DefrostSystem;
         NumberOfObjects += 1;
     }
-    /**
-     * Returns the Length property of the object.
-     * @return Length
-     */
-    public double getLength() {
-        return this.Length;
-    }
-    /**
-     * Sets the Length property of the object.
-     * @param Length
-     */
-    public void setLength(double Length) {
-        this.Length = Length;
-    }
-    /**
-     * Returns the Height property of the object.
-     * @return Height
-     */
-    public double getHeight() {
-        return this.Height;
-    }
-    /**
-     * Sets the Height Property of the object.
-     * @param Height
-     */
-    public void setHeight(double Height) {
-        this.Height = Height;
-    }
-    /**
-     * Returns the Depth Property of the object.
-     * @return Depth
-     */
-    public double getDepth() {
-        return this.Depth;
-    }
-    /**
-     * Sets the Depth property of the object.
-     * @param Depth
-     */
-    public void setDepth(double Depth) {
-        this.Depth = Depth;
-    }
-    /**
-     * Returns the ManufacturerName property of the object.
-     * @return ManufacturerName
-     */
-    public String getManufacturerName() {
-        return this.ManufacturerName;
-    }
-    /**
-     * Sets the ManufacturerName of the object.
-     * @param ManufacturerName
-     */
-    public void setManufacturerName(String ManufacturerName) {
-        this.ManufacturerName = ManufacturerName;
-    }
-    /**
-     * Returns the DeviceName property of the object.
-     * @return DeviceName
-     */
-    public String getDeviceName() {
-        return this.DeviceName;
-    }
-    /**
-     * Sets the DeviceName property of the object.
-     * @param DeviceName
-     */
-    public void setDeviceName(String DeviceName) {
-        this.DeviceName = DeviceName;
-    }
-    /**
-     * Retuns the DeviceName property of the object.
-     * @return DeviceType
-     */
-    public String getDeviceType() {
-        return this.DeviceType;
-    }
-    /**
-     * Sets the DeviceType property of the object.
-     * @param DeviceType
-     */
-    public void setDeviceType(String DeviceType) {
-        this.DeviceType = DeviceType;
-    }
-    /**
-     * Returns the PowerConsumption property of the object.
-     * @return PowerConsumption
-     */
-    public Integer getPowerConsumption() {
-        return this.PowerConsumption;
-    }
-    /**
-     * Sets the PowerConsumption property of the object.
-     * @param PowerConsumption
-     */
-    public void setPowerConsumption(Integer PowerConsumption) {
-        this.PowerConsumption = PowerConsumption;
-    }
+
     /**
      * Returns the FreezerCapacity property of the object.
      * @return FreezerCapacity

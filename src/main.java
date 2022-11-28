@@ -1,4 +1,8 @@
 public class main {
+    public static void deviceStatus(Device object)
+    {
+        System.out.println("Device Status: "+ object.getStatus());
+    }
     public static void main(String[] args) {
         //HomeApplianceStore Store1 = new HomeApplianceStore(args[0],args[1],Integer.parseInt(args[2]));
         HomeApplianceStore Store1 = new HomeApplianceStore();
@@ -21,7 +25,7 @@ public class main {
 
         Oven Oven1 = new Oven(2.5, 1.5, 3, "Samsung", "real23", "Oven", 200, 10, 100, 200, "Manual", "Ceramic");
         WashingMachine WashingMachine1 = new WashingMachine(2.5, 1.5, 3, "Samsung", "real21", "WashingMachine", 100, 10, 2000, 4000, 25.5, 3);
-        System.out.println("Fridge1:");
+        /*System.out.println("Fridge1:");
         Fridge1.printDevice();
         System.out.println("Fridge Objects Created: "+ Fridge.getNumberOfObjects() +"\n");
         System.out.println("AirCondition1:");
@@ -34,7 +38,11 @@ public class main {
         WashingMachine1.printDevice();
         System.out.println("Washing Objects Created: "+WashingMachine.getNumberOfObjects()+"\n");
         System.out.println("Total Amount of Objects = " + (Fridge.getNumberOfObjects()+AirCondition.getNumberOfObjects()+Oven.getNumberOfObjects()+WashingMachine.getNumberOfObjects()));
-
-
+        */
+        Oven1.printDevice();
+        Oven1.powerOn();
+        deviceStatus(Oven1);
+        Oven1.powerOff();
+        deviceStatus(Oven1);
     }
     }
