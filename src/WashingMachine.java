@@ -111,17 +111,12 @@ public class WashingMachine extends Device{
     public void setGFactor(Integer GFactor) {
         this.GFactor = GFactor;
     }
-    /**
-     * This function does nothing for now.
-     */
-    private void periodicMaintenance() {
 
-    }
     /**
      * This function returns the amount of created objects.
      * @return Number of created Objects.
      * */
-    public static int getNumberOfObjects()
+    public int getNumberOfObjects()
     {
         return NumberOfObjects;
     }

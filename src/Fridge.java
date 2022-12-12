@@ -113,17 +113,12 @@ public class Fridge extends Device{
     public void setDefrostSystem(String DefrostSystem) {
         this.DefrostSystem = DefrostSystem;
     }
-    /**
-     * This function does nothing for now.
-     */
-    private void periodicMaintenance() {
 
-    }
     /**
      * This function returns the amount of created objects.
      * @return Number of created Objects.
      * */
-    public static int getNumberOfObjects()
+    public int getNumberOfObjects()
     {
         return NumberOfObjects;
     }

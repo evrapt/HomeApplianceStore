@@ -1,4 +1,8 @@
-public class Device {
+
+
+
+abstract class Device implements DeviceBasic
+{
     protected double Length;
     protected double Height;
     protected double Depth;
@@ -7,29 +11,27 @@ public class Device {
     protected String DeviceType;
     protected Integer PowerConsumption;
     private boolean Status;
-
     public Device(double Length, double Height, double Depth, String ManufacturerName, String DeviceName, String DeviceType, Integer PowerConsumption)
     {
-        this.Length = Length;
-        this.Height = Height;
-        this.Depth = Depth;
-        this.ManufacturerName = ManufacturerName;
-        this.DeviceName = DeviceName;
-        this.DeviceType = DeviceType;
-        this.PowerConsumption = PowerConsumption;
+    this.Length = Length;
+    this.Height = Height;
+    this.Depth = Depth;
+    this.ManufacturerName = ManufacturerName;
+    this.DeviceName = DeviceName;
+    this.DeviceType = DeviceType;
+    this.PowerConsumption = PowerConsumption;
     }
 
     public Device() {
 
     }
-
     /**
      * Returns the Length property of the object.
      * @return Length
      */
     public double getLength() {
-        return Length;
-    }
+    return Length;
+}
     /**
      * Sets the Length property of the object.
      * @param Length
@@ -94,7 +96,7 @@ public class Device {
         this.DeviceName = DeviceName;
     }
     /**
-     * Retuns the DeviceName property of the object.
+     * Returns the DeviceName property of the object.
      * @return DeviceType
      */
     public String getDeviceType() {
@@ -122,6 +124,10 @@ public class Device {
         this.PowerConsumption = PowerConsumption;
     }
 
+    public int periodicMaintenance(int number)
+    {
+        return 0;
+    }
     public void powerOn()
     {
         this.Status = true;
@@ -130,8 +136,13 @@ public class Device {
     {
         this.Status = false;
     }
-    public boolean getStatus()
+    public boolean status()
     {
         return this.Status;
     }
+
+    /** Abstract Classes */
+    abstract void printDevice();
+    abstract int getNumberOfObjects();
 }
+
